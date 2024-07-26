@@ -13,6 +13,8 @@ public class Jump : MonoBehaviour
     bool _groundCheck; //ground
     bool _waterCheck; //water
     private Vector2 _gravityVector;
+    public float CapsuleHeight = 0.25f;
+    public float CapsuleRadius = 0.08f;
 
 
     // Start is called before the first frame update
@@ -25,7 +27,7 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _groundCheck = Physics2D.OverlapCapsule(FeetCollider.position, new Vector2(1, 0.2f), CapsuleDirection2D.Horizontal, 0, groundMask);
+        _groundCheck = Physics2D.OverlapCapsule(FeetCollider.position, new Vector2(CapsuleHeight, CapsuleRadius), CapsuleDirection2D.Horizontal, 0, groundMask);
         if (Input.GetKeyDown(KeyCode.Space) && (_groundCheck || _waterCheck)) // if press space and is on ground or water, runs below code
         {
 
