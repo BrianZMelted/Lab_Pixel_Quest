@@ -12,10 +12,37 @@ public class WalkingEnemyController : MonoBehaviour
     public Transform FeetCollider;
     public LayerMask groundMask;
     bool _groundCheck; //ground
+    //HP system
+    [SerializeField] float health, maxHealth = 5f;
+    [SerializeField] FloatingHealthBar healthBar;
+
+    private void Awake()
+    {
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+        healthBar = GetComponentInChildren<FloatingHealthBar>();
+    }
+    public void TakeDamage(float damageAmount) 
+    {
+        health -= damageAmount;
+        healthBar.UpdateHealthBar(health, maxHealth);
+        if (health <= 0) 
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+    Destroy(gameObject);
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        health = maxHealth;
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        healthBar.UpdateHealthBar(health, maxHealth);
     }
 
     // Update is called once per frame
@@ -38,5 +65,5 @@ public class WalkingEnemyController : MonoBehaviour
         transform.localScale = new Vector3(direction, 1, 1);
     }
 
-
+    
 }

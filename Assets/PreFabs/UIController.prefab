@@ -121,7 +121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3072303954645684004}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: BackButton
         m_Mode: 1
@@ -490,7 +490,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3072303954645684004}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: UpdateSFXSlider
         m_Mode: 1
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3072303954645684004}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: UpdateMusicSlider
         m_Mode: 1
@@ -1434,7 +1434,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3072303954645684004}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: MenuButton
         m_Mode: 1
